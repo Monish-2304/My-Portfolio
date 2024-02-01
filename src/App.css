@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+html{
+scroll-behavior: smooth;
+}
+
+body{
+font-family: 'Montserrat', sans-serif;
+}
+
+.clip-custom-shape {
+  clip-path: polygon(57% 0, 100% 7%, 100% 100%, 0 100%, 0 5%);
+}
+.element-with-random-top {
+  clip-path: polygon(57% 0, 100% 7%, 100% 100%, 0 100%, 0 5%);
+}
+.pentagon-clip{
+  clip-path: polygon( 99.80% 7.20%, 100% 99.80%, 0.00% 100%, 0.00% 6.80%, 72.20% 0.00% );
+}
+.pentagon-clip-small{
+  clip-path: polygon(71% 0, 100% 2%, 100% 100%, 0 100%, 0 3%);
+}
+.clip-linear-increment{
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background:#222A35;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #575C66;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #626970;
+}
