@@ -1,14 +1,16 @@
-import React from 'react'
+import { useContext, useState } from 'react'
 import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import {Bio} from '../../src/data/constants.js'
 import { HashLink as Link } from 'react-router-hash-link';
+import { ProjectModalContext } from '../context/ProjectModalContext.jsx';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const { isProjectModalOpen } = useContext(ProjectModalContext);
 
   return (
-    <nav className=" z-50 bg-[#191924] fixed top-0 w-full" id="/">
+    <nav className={`z-40 bg-[#191924] fixed top-0 w-full ${isProjectModalOpen ? ' hidden' : ''}`} id="/">
       <div className="w-full md:max-w-7xl mx-auto pt-2">
         <div className="flex justify-between h-16 items-center px-4 relative">
           <Link to='#about' className="flex items-center text-white">

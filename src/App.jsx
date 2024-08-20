@@ -6,11 +6,14 @@ import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Footer from "./Components/Footer";
 import Education from "./Components/Education";
+import Experience from "./Components/Experience";
+import { ProjectModalProvider } from "./context/ProjectModalContext";
 
 function App() {
  
   return (
-    <div
+    <ProjectModalProvider>
+       <div
       className={` bg-[#191924] w-full h-full overflow-x-hidden text-white `}
     >
       <Router>
@@ -26,11 +29,14 @@ function App() {
           </div>
           <div className="bg-gradient-to-b from-[#1C1C27] via-[#1E1C29] to-[#31193F]">
           <Education/>
+          <Experience/>
             <Footer/>
           </div>
         </div>
       </Router>
     </div>
+    </ProjectModalProvider>
+   
   );
 }
 
